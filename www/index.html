@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="manifest" href="manifest.json" />
+    <script>
+        window.addEventListener("load", () => {
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker
+                    .register("sw.js", { scope: "./" })
+                    .then(function (reg) { });
+            }
+        });
+    </script>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+
+    <title>Top Rocket League Car</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.png" width="60" height="60" class="d-inline-block align-top" />
+            <span class="navbar-text">
+                Top Rocket League Cars
+            </span>
+        </a>
+
+    </nav>
+    <div class="page" id="listTopList">
+        <main class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h1>Toutes les TopLists</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p id="toplistsize"></p>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-dark" onclick="addTopList()">Ajouter TopList</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row" id="list"></div>
+        </main>
+    </div>
+    <div class="hidden page" id="addTopList">
+        <main class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h1>Ajout d'une TopList</h1>
+                </div>
+            </div>
+        </main>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-dark" onclick="returnTolist()">Liste des TopLists</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <div class="row">
+                <form>
+                    <div class="form-group">
+                        <label for="title">Titre</label>
+                        <input type="text" class="form-control" id="title" placeholder="Titre de ma TopList">
+                    </div>
+                    <div class="form-group">
+                        <label for="desc">Description</label>
+                        <textarea class="form-control" id="desc" rows="3"></textarea>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="hidden page" id="page3">
+        <main class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h1 id="titleTop"></h1>
+                </div>
+            </div>
+        </main>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-dark" onclick="returnTolist()">Liste des TopLists</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row" id="listItems"></div>
+    </div>
+
+    <!-- <script type="text/javascript" src="cordova.js"></script> -->
+    <script type="text/javascript" src="js/native.js"></script>
+    <script type="text/javascript" src="js/router.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/cars.js"></script>
+</body>
+
+</html>
