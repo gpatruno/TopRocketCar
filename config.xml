@@ -15,11 +15,19 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <icon src="www/img/logo.png" />
+    <preference name="SplashScreenDelay" value="4000" /> 
+    <preference name="SplashScreenBackgroundColor" value="0xFFFFFFFF" />
     <platform name="android">
+        <preference name="StatusBarBackgroundColor" value="#008BDD" />
         <allow-intent href="market:*" />
+        <splash src="www/img/res/mipmap-hdpi/ic_launcher.png" density="hdpi" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
+    </platform>
+    <platform name="browser">
+        <preference name="SplashScreen" value="www/img/res/mipmap-hdpi/ic_launcher.png" />
     </platform>
 </widget>

@@ -9,6 +9,8 @@ const CACHED_FILES = [
   `${ORIGIN_URL}/css/index.css`,
   `${ORIGIN_URL}/js/index.js`,
   `${ORIGIN_URL}/img/logo.png`,
+  `${ORIGIN_URL}/js/jquery-3.6.0.min.js`,
+  `${ORIGIN_URL}/js/cars.js`,
 ];
 /** FUNCTIONS */
 

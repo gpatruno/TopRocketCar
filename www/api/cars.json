@@ -3,6 +3,63 @@
         "idTopList": "default",
         "title": "Top liste (défaut)",
         "description": "Top liste par défaut des voitures de Rocket League.",
-        "img": "img/cars/Backfire_body_icon.png"
+        "img": "img/latency.png",
+        "items": [
+            {
+                "name": "Octane",
+                "order": 1,
+                "img": "img/cars/octane_body_icon.png"
+            },
+            {
+                "name": "Merc",
+                "order": 5,
+                "img": "img/cars/Merc_body_icon_paint.png"
+            },
+            {
+                "name": "Backfire",
+                "order": 10,
+                "img": "img/cars/Backfire_body_icon.png"
+            },
+            {
+                "name": "Batmobile",
+                "order": 3,
+                "img": "img/cars/Batmobile_body_icon.png"
+            },
+            {
+                "name": "DeLorean",
+                "order": 9,
+                "img": "img/cars/DeLorean_body_icon.png"
+            },
+            {
+                "name": "Dodge",
+                "order": 8,
+                "img": "img/cars/Dodge_Charger_body_icon.png"
+            },
+            {
+                "name": "Dominus",
+                "order": 2,
+                "img": "img/cars/Dominus_body_icon.png"
+            },
+            {
+                "name": "Grog",
+                "order": 11,
+                "img": "img/cars/Grog_body_icon.png"
+            },
+            {
+                "name": "Imperator",
+                "order": 4,
+                "img": "img/cars/Imperator_DT5_body_icon.png"
+            },
+            {
+                "name": "Nissan Skyline",
+                "order": 7,
+                "img": "img/cars/Nissan_Skyline_body_icon.png"
+            },
+            {
+                "name": "Venom",
+                "order": 6,
+                "img": "img/cars/Venom_body_icon_paint.png"
+            }
+        ]
     }
 ]

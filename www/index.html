@@ -6,6 +6,7 @@
     <link rel="manifest" href="manifest.json" />
     <script>
         window.addEventListener("load", () => {
+            console.log(navigator);
             if ("serviceWorker" in navigator) {
                 navigator.serviceWorker
                     .register("sw.js", { scope: "./" })
@@ -24,10 +25,10 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 
-    <title>Top Rocket League Car</title>
+    <title>Top Rocket League Cars</title>
 </head>
 
-<body>
+<body style="padding-top: 10px;">
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <img src="img/logo.png" width="60" height="60" class="d-inline-block align-top" />
@@ -74,16 +75,22 @@
         <hr>
         <div class="container">
             <div class="row">
-                <form>
-                    <div class="form-group">
-                        <label for="title">Titre</label>
-                        <input type="text" class="form-control" id="title" placeholder="Titre de ma TopList">
+                <form method="post" id="myNewForm">
+                    <button class="btn btn-danger" type="submit">Ajouter</button>
+                    <div class="form-group" style="padding-bottom: 5px;">
+                        <label for="title"><b>ID</b></label>
+                        <input type="text" class="form-control" id="idNewItem" placeholder="ID de ma TopList">
                     </div>
-                    <div class="form-group">
-                        <label for="desc">Description</label>
-                        <textarea class="form-control" id="desc" rows="3"></textarea>
+                    <div class="form-group" style="padding-bottom: 5px;">
+                        <label for="title"><b>Titre</b></label>
+                        <input type="text" class="form-control" id="titleNewItem" placeholder="Titre de ma TopList">
                     </div>
-
+                    <div class="form-group" style="padding-bottom: 5px;">
+                        <label for="desc"><b>Description</b></label>
+                        <textarea class="form-control" id="descNewItem" rows="3"
+                            placeholder="Description de ma TopList"></textarea>
+                    </div>
+                    <div class="row" id="newListItems"></div>
                 </form>
             </div>
         </div>
@@ -109,7 +116,6 @@
 
     <!-- <script type="text/javascript" src="cordova.js"></script> -->
     <script type="text/javascript" src="js/native.js"></script>
-    <script type="text/javascript" src="js/router.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/cars.js"></script>
 </body>
